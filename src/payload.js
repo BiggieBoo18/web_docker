@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <!-- <h1>index.php</h1> -->
-    <!-- <a href=a.php>a.php</a><br> -->
-    <!-- <a href=b.php>b.php</a><br> -->
-    <!-- <a href=c.php>c.php</a><br> -->
-    <!-- <script> -->
-    <!--   alert("XSS"); -->
-      <!-- </script> -->
-    <!-- <iframe src="http://data.luxuryretreats.com/?cachebust=1563179964.88"></iframe> -->
-    <!-- <form method="GET"> -->
-    <!--   <p>検索:<input type="text" name="q" value=""></p> -->
-    <!--   <p><input type="submit" value="送信"></p> -->
-    <!-- </form> -->
-    <!-- <p>検索ワード:<?php echo $_GET["q"] ?></p> -->
-    <!-- <p id="info"></p> -->
-    <!-- <script> -->
-    <!--   document.getElementById("info").textContent = "abc"; -->
-      <!-- </script> -->
-    <script>
+(function (){
       let xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function() {
 	  switch (xhr.readyState) {
@@ -49,6 +29,4 @@
       xhr.open('GET', 'http://data.luxuryretreats.com/');
       xhr.send();
       // xhr.abort();
-    </script>
-  </body>
-</html>
+}());
